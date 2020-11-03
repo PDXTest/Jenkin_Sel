@@ -25,7 +25,7 @@ public class TestBase {
 	public static ExtentTest test;
 	public static WebDriver driver;
 	public static Properties prop;
-	public static String driverpath = ("E:\\Selenium_Work\\Selenium.Com.OrangeCRM\\src\\main\\java\\com\\test\\Config\\Config.properties");
+	public static String driverpath = ("//Jenkin_Sel//Selenium.Com.OrangeCRM//src//main//java//com//test//Config//Config.properties");
 	
 	
 	@BeforeSuite
