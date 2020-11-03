@@ -31,7 +31,7 @@ public class TestBase {
 	@BeforeSuite
 	public static void starttest() {
 		
-		extent = new ExtentReports("E:\\Selenium_Work\\Selenium.Com.OrangeCRM\\ExtentReports\\newExtentReports.html", true);
+		extent = new ExtentReports("D:\\GitRapo\\Selenium.Com.OrangeCRM\\ExtentReports\\newExtentReports.html", true);
 	
 	}
 	

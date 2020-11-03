@@ -28,7 +28,7 @@ public class TestUtil {
 	 private static XSSFWorkbook ExcelWBook;	 
 	 private static XSSFCell Cell;	 
 	 private static XSSFRow Row;
-	 public static String filePath = "E:\\Selenium_Work\\Selenium.Com.OrangeCRM\\Screenshots\\";
+	 public static String filePath = "D:\\GitRapo\\Selenium.Com.OrangeCRM\\Screenshots\\";
 	 
 	 
 	//XLSX excel sheet
