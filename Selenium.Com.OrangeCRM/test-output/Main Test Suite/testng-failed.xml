@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Main Test Suite]" guice-stage="DEVELOPMENT" verbose="5">
+  <test thread-count="5" name="Extent Report Test(failed)" verbose="5">
+    <classes>
+      <class name="com.test.OrangeCRM.LoginTest">
+        <methods>
+          <include name="HLogin1" invocation-numbers="0"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="starttest"/>
+          <include name="getResult"/>
+          <include name="endTest"/>
+          <include name="closedriver"/>
+        </methods>
+      </class> <!-- com.test.OrangeCRM.LoginTest -->
+      <class name="com.test.OrangeCRM.UserManagementTest">
+        <methods>
+          <include name="starttest"/>
+          <include name="AddUsers"/>
+          <include name="getResult"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="closedriver"/>
+        </methods>
+      </class> <!-- com.test.OrangeCRM.UserManagementTest -->
+    </classes>
+  </test> <!-- Extent Report Test(failed) -->
+</suite> <!-- Failed suite [Main Test Suite] -->
