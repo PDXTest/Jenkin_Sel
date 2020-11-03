@@ -5,7 +5,7 @@
    <classes>
      <class name="com.test.OrangeCRM.LoginTest"/>
      <class name="com.test.OrangeCRM.UserManagementTest"/>
-     <class name="com.test.OrangeCRM.LoginTest"/>
+     <class name="com.test.OrangeCRM.LoginTest2"/>
     </classes>
   </test>
   
