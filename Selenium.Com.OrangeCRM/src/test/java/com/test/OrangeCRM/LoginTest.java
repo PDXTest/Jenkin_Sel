@@ -62,7 +62,7 @@ public class LoginTest extends TestBase{
 		try {
 		       org.testng.Assert.assertEquals(dashaboard, "Dashboard");
 		       test.log(LogStatus.PASS, "Test is passed");
-		       test.log(LogStatus.PASS, "Test is passed 1");
+		       test.log(LogStatus.PASS, "Test is passed");
 		       
 		       
 		} catch (AssertionError e) {
