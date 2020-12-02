@@ -28,12 +28,16 @@ public class HRMLogin extends TestBase {
 	}
 	
 	
+		
 	public void Login(String un, String pw) {
 		username.sendKeys(un);
 		password.sendKeys(pw);
 		btnSubmit.click();
 		
 	}
+
+
+
 	
 	
 	

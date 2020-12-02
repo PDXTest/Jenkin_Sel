@@ -55,7 +55,8 @@ public class LoginTest extends TestBase{
 	public void HLogin(@SuppressWarnings("rawtypes") Map mapdata) {	
 		
 		test=extent.startTest("Test Name is : HLogin");
-		HRMlogin.Login((String) mapdata.get("username"), (String) mapdata.get("password"));
+		//HRMlogin.Login((String) mapdata.get("username"), (String) mapdata.get("password"));
+		
 		
 		String dashaboard = driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[1]/h1")).getText();
 		
