@@ -5,23 +5,13 @@
     <classes>
       <class name="com.test.OrangeCRM.LoginTest">
         <methods>
-          <include name="HLogin1"/>
           <include name="setUp"/>
           <include name="starttest"/>
           <include name="getResult"/>
-          <include name="HLogin"/>
+          <include name="HLogin" invocation-numbers="0"/>
           <include name="closedriver"/>
         </methods>
       </class> <!-- com.test.OrangeCRM.LoginTest -->
-      <class name="com.test.OrangeCRM.UserManagementTest">
-        <methods>
-          <include name="starttest"/>
-          <include name="AddUsers"/>
-          <include name="getResult"/>
-          <include name="setUp"/>
-          <include name="closedriver"/>
-        </methods>
-      </class> <!-- com.test.OrangeCRM.UserManagementTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

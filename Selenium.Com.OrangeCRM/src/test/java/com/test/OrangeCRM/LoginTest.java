@@ -1,6 +1,7 @@
 package com.test.OrangeCRM;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.Map;
 
 import org.openqa.selenium.By;
@@ -11,6 +12,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 import com.test.BaseTest.TestBase;
 import com.test.Pages.HRMLogin;
@@ -24,6 +26,8 @@ public class LoginTest extends TestBase{
 	 
 	// static ExtentReports extent;
 	// static ExtentTest test;
+	 @SuppressWarnings({ "rawtypes", "unchecked" })
+	static Map<Integer, ExtentTest> extentTestMap = new HashMap();
 	 
 	 
 	public LoginTest() {
@@ -52,17 +56,15 @@ public class LoginTest extends TestBase{
 	  }
 		
 	@Test (dataProvider = "getHRMTestData")
-	public void HLogin(@SuppressWarnings("rawtypes") Map mapdata) {	
+	public void TEST1(@SuppressWarnings("rawtypes") Map mapdata) {	
 		
-		test=extent.startTest("Test Name is : HLogin");
-		//HRMlogin.Login((String) mapdata.get("username"), (String) mapdata.get("password"));
-		
-		
+		test=extent.startTest("Test Name is : TEST1");
+		HRMlogin.Login((String) mapdata.get("username"), (String) mapdata.get("password"));		
 		String dashaboard = driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[1]/h1")).getText();
-		
 		try {
+			test.log(LogStatus.PASS, "Before test");
 		       org.testng.Assert.assertEquals(dashaboard, "Dashboard");
-		       test.log(LogStatus.PASS, "Test is passed");
+		       
 		       test.log(LogStatus.PASS, "Test is passed");
 		       
 		       
@@ -74,31 +76,32 @@ public class LoginTest extends TestBase{
     }	
 		
 	
-
+	
 	@Test (dataProvider = "getHRMTestData")
-public void HLogin1(@SuppressWarnings("rawtypes") Map mapdata) {	
+	public void TEST2(@SuppressWarnings("rawtypes") Map mapdata) {	
 		
-		test=extent.startTest("Test Name is : HLogin");
-		HRMlogin.Login((String) mapdata.get("username"), (String) mapdata.get("password"));
-		
+		test=extent.startTest("Test Name is : TEST2");
+		HRMlogin.Login((String) mapdata.get("username"), (String) mapdata.get("password"));		
 		String dashaboard = driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[1]/h1")).getText();
-		
-			
 		try {
-		       Assert.assertEquals(dashaboard, "Dashboard");
+			test.log(LogStatus.PASS, "Before test");
+		       org.testng.Assert.assertEquals(dashaboard, "Dashboard");
+		       
 		       test.log(LogStatus.PASS, "Test is passed");
-		     } catch (AssertionError e) {
+		       
+		       
+		} catch (AssertionError e) {
 		    	 test.log(LogStatus.FAIL, "Test Failed");
 		       throw e;
 		     }
 		
-	}
-
+    }	
+		
 		
 	 @AfterMethod     
 	    public void getResult(ITestResult result) throws IOException{
 	    				
-			  if(result.getStatus()==ITestResult.FAILURE) 
+		 /*	  if(result.getStatus()==ITestResult.FAILURE) 
 			  {
 				  
 				  String screenShotPath = TestUtil.capture(driver, result.getName().toString().trim());
@@ -106,11 +109,11 @@ public void HLogin1(@SuppressWarnings("rawtypes") Map mapdata) {
 		            test.log(LogStatus.FAIL, "Snapshot below: " + test.addScreenCapture(screenShotPath));
 		            
 		            
-					/*
+					
 					 * test.log(LogStatus.FAIL, result.getName());; test.log(LogStatus.FAIL,
 					 * result.getThrowable()); String methodName=result.getName().toString().trim();
 					 * TestUtil.takeScreenShot(methodName, driver);
-					 */
+					 
 			  
 			  }
 			  
@@ -123,12 +126,10 @@ public void HLogin1(@SuppressWarnings("rawtypes") Map mapdata) {
 			  {
 			      test.log(LogStatus.SKIP, 
 			      result.getName()); 
-			   }
+			   }*/
 			 		
 		driver.quit();
 	    	
 	}
-	
-	
 
 }

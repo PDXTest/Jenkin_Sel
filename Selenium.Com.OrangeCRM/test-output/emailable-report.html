@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "https://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="https://www.w3.org/1999/xhtml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 <title>TestNG Report</title>
@@ -8,49 +8,34 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num attn">3</td><td class="num">0</td><td class="num">0</td><td class="num">99</td><td></td><td></td></tr>
+<tr><th colspan="8">N11 Test Suite</th></tr>
+<tr><td><a href="#t0">LoginTest</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">6</td><td class="num">87,860</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="2">com.test.OrangeCRM.LoginTest</td><td><a href="#m0">HLogin</a></td><td rowspan="1">1604393571791</td><td rowspan="1">0</td></tr><tr class="skippedeven"><td><a href="#m1">HLogin1</a></td><td rowspan="1">1604393571807</td><td rowspan="1">0</td></tr><tr class="skippedodd"><td rowspan="1">com.test.OrangeCRM.UserManagementTest</td><td><a href="#m2">AddUsers</a></td><td rowspan="1">1604393571816</td><td rowspan="1">0</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">N11 Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">LoginTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">com.test.OrangeCRM.LoginTest</td><td><a href="#m0">TEST1</a></td><td rowspan="1">1608295785042</td><td rowspan="1">3829</td></tr><tr class="failedeven"><td><a href="#m1">TEST2</a></td><td rowspan="1">1608295799359</td><td rowspan="1">4067</td></tr><tr class="failedodd"><td rowspan="2">com.test.OrangeCRM.LoginTest1</td><td><a href="#m2">TEST3</a></td><td rowspan="1">1608295814074</td><td rowspan="1">2711</td></tr><tr class="failedodd"><td><a href="#m3">TEST4</a></td><td rowspan="1">1608295828214</td><td rowspan="1">3705</td></tr><tr class="failedeven"><td rowspan="2">com.test.OrangeCRM.LoginTest3</td><td><a href="#m4">TEST5</a></td><td rowspan="1">1608295842632</td><td rowspan="1">3999</td></tr><tr class="failedeven"><td><a href="#m5">TEST6</a></td><td rowspan="1">1608295857224</td><td rowspan="1">3786</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">com.test.OrangeCRM.LoginTest#HLogin</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: java.lang.NullPointerException: Cannot invoke &quot;java.io.InputStream.markSupported()&quot; because &quot;stream&quot; is null
+<h2>LoginTest</h2><h3 id="m0">com.test.OrangeCRM.LoginTest#TEST1</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{password=admin123, username=Admin}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Dashboard] but found [Tableau de bord]
+	at com.test.OrangeCRM.LoginTest.TEST1(LoginTest.java:66)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: java.lang.NullPointerException: Cannot invoke &quot;java.io.InputStream.markSupported()&quot; because &quot;stream&quot; is null
-	at org.apache.poi.poifs.filesystem.FileMagic.prepareToCheckMagic(FileMagic.java:219)
-	at org.apache.poi.openxml4j.opc.internal.ZipHelper.openZipStream(ZipHelper.java:174)
-	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:104)
-	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:307)
-	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:47)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:309)
-	at com.test.Util.TestUtil.getTestData1(TestUtil.java:184)
-	at com.test.OrangeCRM.LoginTest.getHRMTestData(LoginTest.java:49)
-	... 25 more
 ... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.test.OrangeCRM.LoginTest#HLogin1</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: java.lang.NullPointerException: Cannot invoke &quot;java.io.InputStream.markSupported()&quot; because &quot;stream&quot; is null
+<h3 id="m1">com.test.OrangeCRM.LoginTest#TEST2</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{password=admin123, username=Admin}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Dashboard] but found [Tableau de bord]
+	at com.test.OrangeCRM.LoginTest.TEST2(LoginTest.java:88)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: java.lang.NullPointerException: Cannot invoke &quot;java.io.InputStream.markSupported()&quot; because &quot;stream&quot; is null
-	at org.apache.poi.poifs.filesystem.FileMagic.prepareToCheckMagic(FileMagic.java:219)
-	at org.apache.poi.openxml4j.opc.internal.ZipHelper.openZipStream(ZipHelper.java:174)
-	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:104)
-	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:307)
-	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:47)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:309)
-	at com.test.Util.TestUtil.getTestData1(TestUtil.java:184)
-	at com.test.OrangeCRM.LoginTest.getHRMTestData(LoginTest.java:49)
-	... 25 more
 ... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.test.OrangeCRM.UserManagementTest#AddUsers</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: java.lang.NullPointerException: Cannot invoke &quot;java.io.InputStream.markSupported()&quot; because &quot;stream&quot; is null
+<h3 id="m2">com.test.OrangeCRM.LoginTest1#TEST3</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{password=admin123, username=Admin}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Dashboard] but found [Tableau de bord]
+	at com.test.OrangeCRM.LoginTest1.TEST3(LoginTest1.java:66)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-Caused by: java.lang.NullPointerException: Cannot invoke &quot;java.io.InputStream.markSupported()&quot; because &quot;stream&quot; is null
-	at org.apache.poi.poifs.filesystem.FileMagic.prepareToCheckMagic(FileMagic.java:219)
-	at org.apache.poi.openxml4j.opc.internal.ZipHelper.openZipStream(ZipHelper.java:174)
-	at org.apache.poi.openxml4j.opc.ZipPackage.&lt;init&gt;(ZipPackage.java:104)
-	at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:307)
-	at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:47)
-	at org.apache.poi.xssf.usermodel.XSSFWorkbook.&lt;init&gt;(XSSFWorkbook.java:309)
-	at com.test.Util.TestUtil.getTestData1(TestUtil.java:184)
-	at com.test.OrangeCRM.UserManagementTest.getHRMTestData(UserManagementTest.java:41)
-	... 25 more
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.test.OrangeCRM.LoginTest1#TEST4</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{password=admin123, username=Admin}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Dashboard] but found [Tableau de bord]
+	at com.test.OrangeCRM.LoginTest1.TEST4(LoginTest1.java:88)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.test.OrangeCRM.LoginTest3#TEST5</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{password=admin123, username=Admin}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Dashboard] but found [Tableau de bord]
+	at com.test.OrangeCRM.LoginTest3.TEST5(LoginTest3.java:66)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">com.test.OrangeCRM.LoginTest3#TEST6</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{password=admin123, username=Admin}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [Dashboard] but found [Tableau de bord]
+	at com.test.OrangeCRM.LoginTest3.TEST6(LoginTest3.java:88)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 32 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
