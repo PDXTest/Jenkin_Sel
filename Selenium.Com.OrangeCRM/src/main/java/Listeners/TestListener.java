@@ -4,13 +4,9 @@ import com.relevantcodes.extentreports.LogStatus;
 
 import java.io.IOException;
 
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
-import com.test.Util.ExtentManager;
 import com.test.Util.ExtentTestManager;
 import com.test.Util.TestUtil;
 import com.test.BaseTest.TestBase;
@@ -35,7 +31,7 @@ public class TestListener extends TestBase implements ITestListener  {
         //Do tier down operations for extentreports reporting!
    //     ExtentTestManager.endTest();
      //   ExtentManager.getReporter().flush();
-        driver.quit();
+       // driver.quit();
     }
  
     public void onTestStart(ITestResult iTestResult) {
