@@ -7,6 +7,7 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 
@@ -57,12 +58,12 @@ public class TestBase {
 		
 		String url = prop.getProperty("project_url");
 				
-		//System.setProperty("webdriver.gecko.driver", "E:\\geckodriver\\geckodriver.exe");	
-		//driver = new FirefoxDriver();
+		System.setProperty("webdriver.gecko.driver", "F:\\Selenium Data\\SeleniumDrivers\\geckodriver\\geckodriver.exe");	
+		driver = new FirefoxDriver();
 		
 		
-		System.setProperty("webdriver.chrome.driver", "F:\\Selenium Data\\SeleniumDrivers\\chromedriver\\chromedriver.exe");
-		driver = new ChromeDriver();
+		//System.setProperty("webdriver.chrome.driver", "F:\\Selenium Data\\SeleniumDrivers\\chromedriver_win32\\chromedriver.exe");
+	//	driver = new ChromeDriver();
 					
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();

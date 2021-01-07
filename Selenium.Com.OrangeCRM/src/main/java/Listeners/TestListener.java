@@ -50,17 +50,21 @@ public class TestListener extends TestBase implements ITestListener  {
         System.out.println("I am in onTestFailure method " + getTestMethodName(iTestResult) + " failed");
  
         //Get driver from BaseTest and assign to local webDriver variable.
-  	  String screenShotPath = null;
-	try {
-		screenShotPath = TestUtil.capture(driver, iTestResult.getName().toString().trim());
-	} catch (IOException e) {
-		// TODO Auto-generated catch block
-		e.printStackTrace();
-	}
-	test.log(LogStatus.FAIL, "This test is failed");
-  test.log(LogStatus.FAIL, iTestResult.getThrowable());
-  test.log(LogStatus.FAIL, "Snapshot below: " + test.addScreenCapture(screenShotPath));
+		
+		  String screenShotPath = null; try { screenShotPath = TestUtil.capture(driver, iTestResult.getName().toString().trim()); } catch (IOException e) {  
+			  
+			  e.printStackTrace(); 
+			  
+		  } 
+		  
+		  test.log(LogStatus.FAIL,
+		  "This test is failed"); test.log(LogStatus.FAIL, iTestResult.getThrowable());
+		  test.log(LogStatus.FAIL, "Snapshot below: " +
+		  test.addScreenCapture(screenShotPath));
+		 
     }
+    
+
  
     public void onTestSkipped(ITestResult iTestResult) {
         System.out.println("I am in onTestSkipped method " + getTestMethodName(iTestResult) + " skipped");
