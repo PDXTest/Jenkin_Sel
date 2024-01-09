@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="N11 Test Suite" >
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
     <listeners>
         <listener class-name="Listeners.TestListener"/>
         </listeners>
@@ -8,8 +8,6 @@
     <test name="LoginTest">
         <classes>
             <class name="com.test.OrangeCRM.LoginTest"/>
-             <class name="com.test.OrangeCRM.LoginTest1"/>
-              <class name="com.test.OrangeCRM.LoginTest3"/>
-        </classes>
+                        </classes>
     </test>
 </suite>

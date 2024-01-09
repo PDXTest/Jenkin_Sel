@@ -5,10 +5,11 @@
     <classes>
       <class name="com.test.OrangeCRM.LoginTest">
         <methods>
-          <include name="HLogin1" invocation-numbers="0"/>
+          <include name="TEST1" invocation-numbers="0"/>
           <include name="setUp"/>
           <include name="starttest"/>
           <include name="getResult"/>
+          <include name="TEST2"/>
           <include name="closedriver"/>
         </methods>
       </class> <!-- com.test.OrangeCRM.LoginTest -->

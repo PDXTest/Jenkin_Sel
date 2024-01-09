@@ -26,13 +26,13 @@ public class TestBase {
 	public static ExtentTest test;
 	public static WebDriver driver;
 	public static Properties prop;
-	public static String driverpath = ("D:\\GitRapo\\Selenium.Com.OrangeCRM\\src\\main\\java\\com\\test\\Config\\Config.properties");
+	public static String driverpath = ("C:\\Minakshi_Old_laptop\\Jenkin_Sel\\Selenium.Com.OrangeCRM\\src\\main\\java\\com\\test\\Config\\Config.properties");
 	
 	
 	@BeforeSuite
 	public static void starttest() {
 		
-		extent = new ExtentReports("D:\\GitRapo\\Selenium.Com.OrangeCRM\\ExtentReports\\newExtentReports.html", true);
+		extent = new ExtentReports("C:\\Minakshi_Old_laptop\\Jenkin_Sel\\Selenium.Com.OrangeCRM\\ExtentReports\\newExtentReports.html", true);
 
 	}
 	
@@ -58,7 +58,7 @@ public class TestBase {
 		
 		String url = prop.getProperty("project_url");
 				
-		System.setProperty("webdriver.gecko.driver", "F:\\Selenium Data\\SeleniumDrivers\\geckodriver\\geckodriver.exe");	
+		//System.setProperty("webdriver.gecko.driver", "F:\\Selenium Data\\SeleniumDrivers\\geckodriver\\geckodriver.exe");	
 		driver = new FirefoxDriver();
 		
 		

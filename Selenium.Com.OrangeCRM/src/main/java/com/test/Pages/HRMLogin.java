@@ -9,16 +9,16 @@ import com.test.BaseTest.TestBase;
 public class HRMLogin extends TestBase {
 
 	
-	@FindBy(name="txtUsername")
+	@FindBy(name="username")
 	WebElement username;
 	
-	@FindBy(name="txtPassword")
+	@FindBy(name="password")
 	WebElement password;
 	
-	@FindBy(name="Submit")
+	@FindBy(className="oxd-button")
 	WebElement btnSubmit;
 	
-	@FindBy(xpath="//*[@id=\"content\"]/div/div[1]/h1")
+	@FindBy(className="oxd-topbar-header-breadcrumb-module")
 	 WebElement Dashboard;
 	
 	

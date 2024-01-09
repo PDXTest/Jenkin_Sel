@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
+  <listeners>
+    <listener class-name="Listeners.TestListener"/>
+  </listeners>
+  <test thread-count="5" name="LoginTest(failed)">
     <classes>
       <class name="com.test.OrangeCRM.LoginTest">
         <methods>
+          <include name="TEST1" invocation-numbers="0"/>
           <include name="setUp"/>
           <include name="starttest"/>
           <include name="getResult"/>
-          <include name="HLogin" invocation-numbers="0"/>
+          <include name="TEST2" invocation-numbers="0"/>
           <include name="closedriver"/>
         </methods>
       </class> <!-- com.test.OrangeCRM.LoginTest -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- LoginTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

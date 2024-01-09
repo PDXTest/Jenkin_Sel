@@ -21,7 +21,7 @@ import com.test.Util.TestUtil;
 public class LoginTest extends TestBase{
 	
 	HRMLogin HRMlogin;
-	String Filename = "D:\\GitRapo\\Selenium.Com.OrangeCRM\\src\\main\\java\\com\\test\\TestData\\TestData1.xlsx";
+	String Filename = "C:\\Minakshi_Old_laptop\\Jenkin_Sel\\Selenium.Com.OrangeCRM\\src\\main\\java\\com\\test\\TestData\\TestData1.xlsx";
 	 String sheetname =  "login";
 	 
 	// static ExtentReports extentbbbb;
@@ -60,10 +60,10 @@ public class LoginTest extends TestBase{
 		
 		test=extent.startTest("Test Name is : TEST1");
 		HRMlogin.Login((String) mapdata.get("username"), (String) mapdata.get("password"));		
-		String dashaboard = driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[1]/h1")).getText();
+		String dashaboard = driver.findElement(By.className("oxd-topbar-header-breadcrumb-module")).getText();
 		try {
 			test.log(LogStatus.PASS, "Before test");
-		       org.testng.Assert.assertEquals(dashaboard, "Dashboard");
+		       org.testng.Assert.assertEquals(dashaboard, "Tableau de bord");
 		       
 		       test.log(LogStatus.PASS, "Hello Mehul2");
 		       test.log(LogStatus.PASS, "Test is passed new again new");
@@ -84,10 +84,10 @@ public class LoginTest extends TestBase{
 		
 		test=extent.startTest("Test Name is : TEST2");
 		HRMlogin.Login((String) mapdata.get("username"), (String) mapdata.get("password"));		
-		String dashaboard = driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[1]/h1")).getText();
+		String dashaboard = driver.findElement(By.className("oxd-topbar-header-breadcrumb-module")).getText();
 		try {
 			test.log(LogStatus.PASS, "Before test");
-		       org.testng.Assert.assertEquals(dashaboard, "Dashboard");
+		       org.testng.Assert.assertEquals(dashaboard, "Tableau de bord");
 		       
 		       test.log(LogStatus.PASS, "Test is passed");
 		       
